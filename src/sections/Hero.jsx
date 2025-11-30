@@ -6,13 +6,10 @@ import SystemLog from '../components/SystemLog';
 
 const Hero = () => {
   return (
-    <section className="h-screen w-screen flex items-center justify-center bg-primary relative overflow-hidden">
-      {/* Background Elements */}
+    <section className="min-h-screen w-full flex items-center justify-center bg-primary relative overflow-hidden py-20 md:py-0">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple/20 rounded-full blur-[120px]" />
         <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-accent/20 rounded-full blur-[120px]" />
-
-        {/* System Log Decoration */}
         <div className="absolute top-24 right-10 w-64 h-96 hidden lg:block opacity-50">
           <SystemLog />
         </div>

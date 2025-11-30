@@ -18,7 +18,7 @@ const Skills = () => {
         },
         {
             title: "AI",
-            skills: ["Prompt Engineering", "LongChat"]
+            skills: ["Prompt Engineering", "LongChain"]
         },
         {
             title: "Machine Learning",
@@ -35,7 +35,7 @@ const Skills = () => {
     ];
 
     return (
-        <section className="h-screen w-screen bg-primary relative overflow-hidden flex flex-col pt-24">
+        <section className="min-h-screen w-full bg-primary relative overflow-hidden flex flex-col pt-24 pb-20 md:pb-0">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
             <motion.div
@@ -58,7 +58,6 @@ const Skills = () => {
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
                                     className="bg-secondary/40 backdrop-blur-xl p-6 rounded-xl border border-white/5 hover:border-accent/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group h-fit cursor-pointer relative overflow-hidden"
                                 >
-                                    {/* Tech Chip Decor */}
                                     <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-white/5 to-transparent -mr-8 -mt-8 rotate-45" />
                                     <div className="absolute bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-accent/20 rounded-bl-lg" />
 

@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#020617", // Deep Navy/Black
-        secondary: "#0f172a", // Slate 900
-        accent: "#06b6d4", // Cyan 500 (Electric Cyan)
-        "accent-glow": "#22d3ee", // Cyan 400
-        purple: "#a855f7", // Purple 500
-        pink: "#ec4899", // Pink 500
-        text: "#f8fafc", // Slate 50
-        muted: "#94a3b8", // Slate 400
+        primary: "#020617",
+        secondary: "#0f172a",
+        accent: "#06b6d4",
+        "accent-glow": "#22d3ee",
+        purple: "#a855f7",
+        pink: "#ec4899",
+        text: "#f8fafc",
+        muted: "#94a3b8",
       },
       fontFamily: {
         sans: ['Outfit', 'Inter', 'sans-serif'],

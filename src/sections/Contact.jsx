@@ -37,7 +37,7 @@ const MagneticButton = ({ children }) => {
 
 const Contact = () => {
     return (
-        <section className="h-screen w-screen flex items-center justify-center bg-secondary relative overflow-hidden">
+        <section className="min-h-screen w-full flex items-center justify-center bg-secondary relative overflow-hidden py-20 md:py-0">
             <MatrixRain />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-primary opacity-80"></div>
 

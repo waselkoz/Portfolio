@@ -22,7 +22,6 @@ function App() {
   const totalSections = 5;
 
   useEffect(() => {
-    // ... existing keydown logic ...
     const handleKeyDown = (e) => {
       if (e.key === 'ArrowRight') {
         setCurrentSection((prev) => Math.min(prev + 1, totalSections - 1));
@@ -35,10 +34,9 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Optional: Add wheel support to switch sections
   useEffect(() => {
     const handleWheel = (e) => {
-      if (Math.abs(e.deltaY) > 50) { // Threshold to prevent accidental triggers
+      if (Math.abs(e.deltaY) > 50) {
         if (e.deltaY > 0) {
           setCurrentSection((prev) => Math.min(prev + 1, totalSections - 1));
         } else {
@@ -47,8 +45,6 @@ function App() {
       }
     };
 
-    // Debounce or throttle could be added here for smoother experience
-    // For now, we'll leave it simple or disable it if it's too sensitive.
     window.addEventListener('wheel', handleWheel);
     return () => window.removeEventListener('wheel', handleWheel);
   }, []);
@@ -70,15 +66,23 @@ function App() {
         </>
       )}
 
-      {/* Dynamic Background Elements - Persistent across sections */}
+
       <ParticleBackground />
       <CyberpunkGrid />
 
-      {/* Main Content Slider */}
+      {/* Main Content Slider (Desktop) / Vertical Scroll (Mobile) */}
+      <div className="md:hidden w-full h-full overflow-y-auto overflow-x-hidden scroll-smooth">
+        <div className="w-full h-screen relative z-10"><Hero /></div>
+        <div className="w-full min-h-screen relative z-10"><About /></div>
+        <div className="w-full min-h-screen relative z-10"><Skills /></div>
+        <div className="w-full min-h-screen relative z-10"><Projects /></div>
+        <div className="w-full min-h-screen relative z-10"><Contact /></div>
+      </div>
+
       <motion.div
-        className="flex w-[500vw] h-screen will-change-transform"
+        className="hidden md:flex w-[500vw] h-screen will-change-transform"
         animate={{ x: `-${currentSection * 100}vw` }}
-        transition={{ duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] }} // Smoother bezier curve
+        transition={{ duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] }}
       >
         <div className="w-screen h-screen flex-shrink-0 overflow-hidden relative z-10">
           <Hero />

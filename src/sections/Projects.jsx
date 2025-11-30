@@ -9,28 +9,15 @@ const Projects = () => {
         {
             title: "Real Time Driver Location",
             description: "A real-time driver location tracking system using React and Node.js and socket.io with tailwindcss.",
-            tech: ["React", "Node.js", "Socket.io", "Tailwind"],
+            tech: ["React", "Node.js", "Socket.io", "Tailwind", "mapbox"],
             github: "#",
             external: "#"
         },
-        {
-            title: "AI Dashboard",
-            description: "Analytics platform powered by machine learning to predict user behavior and trends.",
-            tech: ["Next.js", "Python", "TensorFlow", "D3.js"],
-            github: "#",
-            external: "#"
-        },
-        {
-            title: "Crypto Portfolio",
-            description: "Real-time cryptocurrency tracker with live charts and portfolio management tools.",
-            tech: ["Vue.js", "WebSockets", "Chart.js", "Firebase"],
-            github: "#",
-            external: "#"
-        }
+
     ];
 
     return (
-        <section className="h-screen w-screen flex items-center justify-center bg-primary relative overflow-hidden">
+        <section className="min-h-screen w-full flex items-center justify-center bg-primary relative overflow-hidden py-20 md:py-0">
             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-primary to-primary opacity-50"></div>
 
             <motion.div
@@ -60,10 +47,8 @@ const Projects = () => {
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 className="project-card group relative bg-secondary/30 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden h-full flex flex-col hover:border-accent/50 transition-colors duration-500"
                             >
-                                {/* Holographic Border Effect */}
                                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                                {/* Data Stream Effect */}
                                 <div className="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none">
                                     <div className="flex justify-around">
                                         {[...Array(5)].map((_, i) => (

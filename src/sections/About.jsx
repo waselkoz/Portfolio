@@ -8,7 +8,7 @@ const About = () => {
   const skills = ['JavaScript (ES6+)', 'React', 'Node.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'];
 
   return (
-    <section className="h-screen w-screen flex items-center justify-center bg-secondary relative overflow-hidden">
+    <section className="min-h-screen w-full flex items-center justify-center bg-secondary relative overflow-hidden py-20 md:py-0">
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple/10 via-primary to-primary opacity-50"></div>
 
       <motion.div
