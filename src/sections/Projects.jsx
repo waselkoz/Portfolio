@@ -8,10 +8,10 @@ const Projects = () => {
     const projects = [
         {
             title: "Real Time Driver Location",
-            description: "A real-time driver location tracking system using React and Node.js and socket.io with tailwindcss.",
-            tech: ["React", "Node.js", "Socket.io", "Tailwind", "mapbox"],
-            github: "#",
-            external: "#"
+            description: "A Real Time Driver Location Tracking System using React and Node.js and socket.io with tailwindcss and mapbox and express.js",
+            tech: ["React", "Node.js", "Socket.io", "Tailwind", "mapbox", "Express.js"],
+            github: "https://github.com/waselkoz/admin_dashboard",
+            external: "https://admin-dashboard-sable-three-55.vercel.app"
         },
 
     ];
@@ -64,9 +64,25 @@ const Projects = () => {
                                         <div className="p-3 bg-primary/50 rounded-lg border border-accent/20 group-hover:border-accent/50 transition-colors">
                                             <Folder size={24} className="text-accent" />
                                         </div>
-                                        <div className="flex gap-4 text-muted">
-                                            <a href={project.github} className="hover:text-accent transition-colors p-2 hover:bg-white/5 rounded-full"><Github size={20} /></a>
-                                            <a href={project.external} className="hover:text-accent transition-colors p-2 hover:bg-white/5 rounded-full"><ExternalLink size={20} /></a>
+                                        <div className="flex gap-4 text-muted z-50 relative pointer-events-auto">
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={(e) => e.stopPropagation()}
+                                                className="hover:text-accent transition-colors p-2 hover:bg-white/5 rounded-full cursor-pointer relative z-50"
+                                            >
+                                                <Github size={20} />
+                                            </a>
+                                            <a
+                                                href={project.external}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={(e) => e.stopPropagation()}
+                                                className="hover:text-accent transition-colors p-2 hover:bg-white/5 rounded-full cursor-pointer relative z-50"
+                                            >
+                                                <ExternalLink size={20} />
+                                            </a>
                                         </div>
                                     </div>
 
