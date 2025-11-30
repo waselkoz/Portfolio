@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"No tests specified, passing build\" && exit 0"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
